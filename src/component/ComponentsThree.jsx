@@ -1,15 +1,18 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { decrease } from '../store/action/counter.action'
+import { decrease } from '../store/slice/counter.slice'
+// import { decrease } from '../store/action/counter.action'
 
 const ComponentsThree = () => {
     const dispatch = useDispatch()
     const handleDecrease = () => {
-        decrease(dispatch) 
+        // decrease(dispatch) Redux
+        dispatch(decrease())
     }
   return (
     <div>
-      <button onClick={handleDecrease}>Decrease</button>
+      ComponentsThree
+      <button className=' bg-red-400 px-3 rounded-lg' onClick={handleDecrease}>Decrease</button>
     </div>
   )
 }
